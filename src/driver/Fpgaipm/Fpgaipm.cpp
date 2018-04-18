@@ -42,7 +42,7 @@ int Fpgaipm::writeRow0(CORE_ID coreId, OPCODE opcode, CTRL_WORD ctrlWord) {
 	return ret;
 }
 int Fpgaipm::writeData(uint8_t address, FPGA_DATA data) {
-// TODO: inserire comando di scrittura
+// TODO: SIMONE inserire comando di scrittura
 	return 0;
 }
 
@@ -55,8 +55,8 @@ int Fpgaipm::fpga_openTransaction(CORE_ID coreId, OPCODE opcode,
 	int trywait = sem_trywait(&semaphore);
 	if (trywait == 0) {
 		/*
-		 * TODO: verificare che il buffer non è lockato (GPIO interrupt alto in input) da un ipcore.
-		 * se il buffer è libero, lockalo.
+		 * TODO: verificare che il buffer non ï¿½ lockato (GPIO interrupt alto in input) da un ipcore.
+		 * se il buffer ï¿½ libero, lockalo.
 		 */
 		currentCore = coreId;
 		currentOpcode = opcode;
@@ -170,3 +170,12 @@ int Fpgaipm::fpga_checkInterrupt(CORE_ID coreId) {
 	}
 	return -1;
 }
+
+
+// TODO: SIMONE aggiungere readDate()
+
+// TODO: SIMONE configurazione GPIO.
+
+// TODO: ALESSANDRO preparare scheletri funzioni mancanti
+
+// TODO: ALESSANDRO gestione interrupt
