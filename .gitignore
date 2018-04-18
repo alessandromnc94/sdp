@@ -1,0 +1,6 @@
+.cproject
+bin/
+.project
+*.o
+*.exe
+.settings/
